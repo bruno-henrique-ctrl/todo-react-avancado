@@ -11,7 +11,7 @@ const Lista = () => {
     }, [listaFiltrada]);
 
     return (
-        <ul className="space-y-3 mt-6">
+        <ul className="w-full px-4 mt-6 space-y-3 max-w-full sm:max-w-2xl sm:mx-auto">
             {listaMemoria}
         </ul>
     );

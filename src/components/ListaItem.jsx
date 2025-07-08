@@ -6,28 +6,31 @@ const ListaItem = ({ item }) => {
 
     return (
         <li
-            className={`flex items-center justify-between p-3 border rounded-md shadow-sm ${item.completed ? 'bg-gray-100 text-gray-500 line-through' : 'bg-white'
+            className={`flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-4 border rounded-md shadow-sm ${item.completed ? 'bg-gray-100 text-gray-500 line-through' : 'bg-white'
                 }`}
         >
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 w-full">
+                <input
+                    type="checkbox"
+                    id={inputId}
+                    checked={item.completed}
+                    onChange={() => toggleItem(item.id)}
+                    className="mt-1 w-4 h-4 accent-blue-600 shrink-0"
+                />
                 <label
                     htmlFor={inputId}
-                    className="cursor-pointer select-none flex items-center gap-2"
+                    className="cursor-pointer select-text w-full"
                 >
-                    <input
-                        type="checkbox"
-                        id={inputId}
-                        checked={item.completed}
-                        onChange={() => toggleItem(item.id)}
-                        className="w-4 h-4 text-blue-600 accent-blue-600"
-                    />
-                    <span className="text-md m-2">{item.text}</span>
+                    <span className="block text-base break-words">
+                        {item.text}
+                    </span>
                 </label>
             </div>
+
             <button
                 type="button"
                 onClick={() => deleteItem(item.id)}
-                className="button button__red"
+                className="self-end sm:self-auto bg-red-600 text-white px-3 py-1.5 rounded-md hover:bg-red-700 transition-colors text-sm whitespace-nowrap"
             >
                 Excluir
             </button>

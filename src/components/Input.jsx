@@ -13,7 +13,7 @@ const Input = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="flex gap-3 items-center mt-6">
+        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center mt-6 w-full px-4 max-w-full sm:max-w-2xl mx-auto">
             <input
                 value={texto}
                 onChange={e => setTexto(e.target.value)}
