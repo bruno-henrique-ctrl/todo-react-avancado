@@ -47,11 +47,17 @@ cd nome-do-repositorio
 
 ### 2. Instalar as dependências
 
-- npm install
+```bash
+npm install
+````
 
 ### 3. Rodar o projeto
 
-- npm run dev
+```bash
+npm run dev
+```
+
+---
 
 ## 🎨 Estilização com Tailwind CSS
 
@@ -67,23 +73,36 @@ Tailwind já está configurado com Vite e pode ser encontrado nos arquivos:
 
 Exemplo de uso no React:
 
+```bash
 <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
   Adicionar
 </button>
+```
+
+---
 
 ## 📁 Estrutura de Pastas (resumida)
 
+```bash
 src/
 ├── components/ # Componentes React (Input, Lista, Filtros, etc.)
 ├── context/ # Context API (ListaContext)
+├── hooks/ # (localStored)
 ├── App.jsx
-├── main.jsx
+├── index.js
 ├── output.css # Estilos com Tailwind
+```
+
+---
 
 ## 💾 Persistência de Dados
 
 As tarefas são armazenadas no localStorage, garantindo que permaneçam salvas mesmo após recarregar a página ou fechar o navegador.
 
+---
+
 ## 📦 Build para produção
 
-- npm run build
+```bash
+npm run build
+```
